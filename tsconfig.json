@@ -13,5 +13,8 @@
     {
       "path": "./tsconfig.config.json"
     }
-  ]
+  ],
+  // https://bobbyhadz.com/blog/typescript-property-does-not-exist-on-type-window
+  // window klaytn 객체 타입
+  "typeRoots": ["./node_modules/@types", "./src/types"]
 }

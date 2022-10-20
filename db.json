@@ -1,0 +1,16 @@
+{
+  "notifications": [
+    {
+      "id": 1,
+      "title": "공지 제목 1",
+      "content": "공지 내용 1"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "이벤트 제목 1",
+      "content": "이벤트 내용 1"
+    }
+  ]
+}

@@ -9,7 +9,16 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
+			stream: require.resolve('stream-browserify'),
+			crypto: require.resolve('crypto-browserify'),
+			http: require.resolve('stream-http'),
+			https: require.resolve('https-browserify'),
+			electron: require.resolve('electron'),
 		},
+	},
+	define: {
+		'process.env': {},
+		global: {},
 	},
 	server: {
 		port: 3000,
