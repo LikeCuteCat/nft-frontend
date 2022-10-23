@@ -19,3 +19,9 @@ export class Metamask extends Wallet {
 		return `0x1111`;
 	}
 }
+
+export class Kaikas extends Wallet {
+	getAddress(): string {
+		throw new Error('Method not implemented.');
+	}
+}
