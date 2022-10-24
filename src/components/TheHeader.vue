@@ -84,11 +84,13 @@
 </template>
 
 <script setup lang="ts">
+// import { Provider } from '@/types/wallet';
 import Caver from 'caver-js';
 import { useBrowserStore } from '@/stores/browser';
 import { ref } from 'vue';
 import detectEthereumProvider from '@metamask/detect-provider';
 import { useUserStore } from '@/stores/user';
+import { useWalletStore } from '@/stores/wallet';
 import { useRouter } from 'vue-router';
 
 const browserStore = useBrowserStore();
@@ -146,6 +148,7 @@ const options = [
 	},
 ];
 const handleSelect = (input: string) => {
+	if (input === 'my') goProfilePage();
 	if (input === 'logout') logout();
 	if (input === 'changeMode') changeMode();
 };
@@ -156,6 +159,14 @@ const goNotificationPage = () => {
 		name: 'notification',
 	});
 };
+const goProfilePage = () => {
+	router.push({
+		name: 'profile',
+	});
+};
+
+const walletStore = useWalletStore();
+// function connectWallet(wallet: Provider) {}
 </script>
 
 <style scoped>
